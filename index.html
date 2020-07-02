@@ -64,9 +64,48 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-C-抽象类和接口" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-观察者模式和中介者模式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/06/26/C-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/" class="article-date">
+    <a href="/2020/06/28/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time datetime="2020-06-28T02:05:05.000Z" itemprop="datePublished">2020-06-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/28/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">观察者模式和中介者模式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h2><p>简单来说就是有很多不同类型的对象，每个类型都有相应一系列的观察者，当被观察者发生改变，要发送通知给所有依赖于此对象的观察者通知观察者和被观察者时抽象耦合，建立一套触发机制。<br>缺点：<br>1：如果一个被观察者有很多直接和间接观察者，全部通知有点麻烦<br>2：如果观察者和被观察者有循环依赖，循环调用会导致系统崩溃<br>3：观察者只是知道被观察者发生了变化，而不知道是怎么发生变化的</p>
+<h2 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h2><p>当对象发生改变，发出通知给中介者，由中介者去发送通知给要通知的对象，中介者必须要维护场上所有对象。该设计模式也有较好的复用性和解耦。<br>缺点<br>1：中介者代码量庞大，维护比较困难</p>
+<h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2><p><a href="https://www.runoob.com/design-pattern/observer-pattern.html" target="_blank" rel="noopener">https://www.runoob.com/design-pattern/observer-pattern.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/28/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" data-id="ckc525wi50001ygun07sjcjic" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-抽象类和接口-C#" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/" class="article-date">
   <time datetime="2020-06-26T14:47:13.000Z" itemprop="datePublished">2020-06-26</time>
 </a>
     
@@ -78,7 +117,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/26/C-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">C#抽象类和接口</a>
+      <a class="article-title" href="/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/">C#抽象类和接口</a>
     </h1>
   
 
@@ -88,13 +127,14 @@
       
         <h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>将对象共用方法写出方法名和返回类型和参数，没有方法体，如果要加入成员变量，只能是静态常量</p>
 <h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>可以有成员变量，成员方法，方法可以是抽象或非抽象，抽象方法不能有方法体，该类不能实例化，抽象方法必须在抽象类里。</p>
-<p>共同点：把对象的共性虚化</p>
-<p>使用场景探究：<br>1.如果从对象的特性来说，对象需要共用该方法，并且共用成员变量，可以考虑继承抽象类；如果仅是实现某方法，可以使用接口。<br>2.</p>
+<p>共同点：把对象的共性虚化<br>区别：接口只有Public，并且不方便随意增删改方法，因为会影响所有实现类，而接口如果加入非抽象方法不会影响子类。</p>
+<p>使用场景探究：<br>1.如果从对象的特性来说，对象需要共用该方法，并且共用成员变量，可以考虑继承抽象类；如果仅是实现某方法，可以使用接口。<br>2.抽象类用于捕捉子类共性，而一旦一个类实现某接口，就要实现里面所有方法。</p>
+<p>备注：题外话，项目中的接口和代码接口不一样，代码接口用于规范代码，项目接口属于实现一个信息处理类，让别的代码可以访问成员和方法进行调用，比如字典，字典便是实现个IConection等各个接口的方法的实现类，你可以去调用字典完成你的功能，不必关心内部实现，也可以自己写一个方法继承相关类去写一个字典类</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/26/C-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/" data-id="ckbwi97l60000voun6ts06shv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/" data-id="ckc525wib0004ygun1izb1w4o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -130,7 +170,46 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/25/first/" data-id="ckbwi97lc0001vounagf07rzy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/25/first/" data-id="ckc525wgc0000ygunabyjhwfa" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-深究SmoothDamp和Lerp函数-Unity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/" class="article-date">
+  <time datetime="2020-06-24T16:57:43.000Z" itemprop="datePublished">2020-06-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/">first</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原本我一直以为这两个函数实际上是差不多的，lerp是线性而smooth是弧型插值，直到我心血来潮写下这两行代码<br><img src="https://raw.githubusercontent.com/leeXin183/Resources/master/Pictures/SL.png" alt="Image text"><br>按下w和d都会影响两个方向的数值，按下a或者s正常，原因至今未明</p>
+<h2 id="SmoothDamp"><a href="#SmoothDamp" class="headerlink" title="SmoothDamp"></a>SmoothDamp</h2><p>弧型插值</p>
+<h2 id="Lerp"><a href="#Lerp" class="headerlink" title="Lerp"></a>Lerp</h2><p>线性插值，官方代码注释中解释是在from和to之间用t线性插值，t在0-1之间，t为0时返回from,t为1时返回to，t为0.5返回平均值，具体公式from-(to-from)*t</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/" data-id="ckc525wi80002ygun9dgyddne" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/24/hello-world/" data-id="ckbwi97le0002voun10jocejc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/24/hello-world/" data-id="ckc525wi90003yguneh7gcon5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -220,11 +299,19 @@
       <ul>
         
           <li>
-            <a href="/2020/06/26/C-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">C#抽象类和接口</a>
+            <a href="/2020/06/28/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">观察者模式和中介者模式</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/">C#抽象类和接口</a>
           </li>
         
           <li>
             <a href="/2020/06/25/first/">first</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/">first</a>
           </li>
         
           <li>
