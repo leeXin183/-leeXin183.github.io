@@ -90,7 +90,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/03/struct%E5%92%8Cclass/" data-id="ckcbkx7e9000028un577034d7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/03/struct%E5%92%8Cclass/" data-id="ckcbl81q70000n0un9rh7go2d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,7 +129,47 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/28/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" data-id="ckcbkx7j7000528unbnec7409" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/28/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" data-id="ckcbl81qp0005n0undk5a4lba" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-碰撞检测" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" class="article-date">
+  <time datetime="2020-06-26T16:00:00.000Z" itemprop="datePublished">2020-06-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="检测方式探究"><a href="#检测方式探究" class="headerlink" title="检测方式探究"></a>检测方式探究</h2><p>一：colider or trigger<br>这两个方式应该是初学者学习用的最多的检测方式，因为的确方便，而且确实可以根据刀剑范围所可以攻击到的地方进行检测，但该方法有一个致命缺陷，就是检测次数和动画帧数和真机画面渲染次数挂钩，即是如果动画过快导致碰撞框中间出现掉帧，则在该掉帧之间的敌人便无法攻击到。</p>
+<p>二：射线检测<br>射线检测即是指定位置，方向等信息发出一条射线，根据射线反馈的信息来操作物件交互，该方法常用在射击游戏里，在动作游戏中也经常用到。在本人的认知里该方法应该是最快最灵敏并且最省性能的方法了。</p>
+<p>三：向量计算<br>本人采用静态变量实现的该方法，类似崩坏3中关卡内其实地形不大，敌人数量也有限，那么所有敌人可以存放在一个静态链表里，时刻检测玩家与所有敌人的位置距离，向量角度等信息。该方法可能比较消耗性能，比如攻击时也检测所有敌人的位置信息以判断是否在攻击有效范围内。</p>
+<p>四：Bounds检测<br>该方法即调用unity的Bounds内置API来根据中心，半高创建一个长方体，常用其contains方法判断某个点(vector3变量)是否在长方体内。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" data-id="ckcbl81qq0006n0unfkqj1k3c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -170,47 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/" data-id="ckcbkx7j8000628ungk5g8oji" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-3d游戏攻击碰撞检测" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/25/3d%E6%B8%B8%E6%88%8F%E6%94%BB%E5%87%BB%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" class="article-date">
-  <time datetime="2020-06-24T16:57:43.000Z" itemprop="datePublished">2020-06-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/25/3d%E6%B8%B8%E6%88%8F%E6%94%BB%E5%87%BB%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="检测方式探究"><a href="#检测方式探究" class="headerlink" title="检测方式探究"></a>检测方式探究</h2><p>一：colider or trigger<br>这两个方式应该是初学者学习用的最多的检测方式，因为的确方便，而且确实可以根据刀剑范围所可以攻击到的地方进行检测，但该方法有一个致命缺陷，就是检测次数和动画帧数和真机画面渲染次数挂钩，即是如果动画过快导致碰撞框中间出现掉帧，则在该掉帧之间的敌人便无法攻击到。</p>
-<p>二：射线检测<br>射线检测即是指定位置，方向等信息发出一条射线，根据射线反馈的信息来操作物件交互，该方法常用在射击游戏里，在动作游戏中也经常用到。在本人的认知里该方法应该是最快最灵敏并且最省性能的方法了。</p>
-<p>三：向量计算<br>本人采用静态变量实现的该方法，类似崩坏3中关卡内其实地形不大，敌人数量也有限，那么所有敌人可以存放在一个静态链表里，时刻检测玩家与所有敌人的位置距离，向量角度等信息。该方法可能比较消耗性能，比如攻击时也检测所有敌人的位置信息以判断是否在攻击有效范围内。</p>
-<p>四：Bounds检测<br>该方法即调用unity的Bounds内置API来根据中心，半高创建一个长方体，常用其contains方法判断某个点(vector3变量)是否在长方体内。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/25/3d%E6%B8%B8%E6%88%8F%E6%94%BB%E5%87%BB%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" data-id="ckcbkx7j0000128un2vp3676f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/" data-id="ckcbl81qn0004n0un7lrnbzw0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -246,7 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/25/first/" data-id="ckcbkx7j2000228uncxp93knr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/25/first/" data-id="ckcbl81qj0002n0uncko8299z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/" data-id="ckcbkx7j4000328un9uzcdruk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/" data-id="ckcbl81ql0003n0un87ou8q8r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -334,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/24/hello-world/" data-id="ckcbkx7j5000428un27wy8yib" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/24/hello-world/" data-id="ckcbl81qf0001n0un23su0d7o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -383,11 +383,11 @@
           </li>
         
           <li>
-            <a href="/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/">C#抽象类和接口</a>
+            <a href="/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
           </li>
         
           <li>
-            <a href="/2020/06/25/3d%E6%B8%B8%E6%88%8F%E6%94%BB%E5%87%BB%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
+            <a href="/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/">C#抽象类和接口</a>
           </li>
         
           <li>
