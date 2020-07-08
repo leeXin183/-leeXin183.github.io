@@ -1,401 +1,1253 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+
+
 
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="hello world">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="hello world">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="LeeXin">
 <meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>Hexo</title>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+
 
 <meta name="generator" content="Hexo 4.2.1"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
   
-    <article id="post-struct和class" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/08/struct%E5%92%8Cclass/" class="article-date">
-  <time datetime="2020-07-08T09:00:28.000Z" itemprop="datePublished">2020-07-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/08/struct%E5%92%8Cclass/">struct和class</a>
-    </h1>
+    
   
 
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/08/struct%E5%92%8Cclass/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LeeXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/08/struct%E5%92%8Cclass/" itemprop="url">struct和class</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-08T17:00:28+08:00">
+                2020-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h2><p>结构体，</p>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/08/struct%E5%92%8Cclass/" data-id="ckcd6gi0n0006dwun7g1p95gg" class="article-share-link">Share</a>
       
+
+      
+        
+          
+            <h2 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h2><p>结构体，</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-碰撞检测" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" class="article-date">
-  <time datetime="2020-06-26T16:00:00.000Z" itemprop="datePublished">2020-06-27</time>
-</a>
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LeeXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" itemprop="url">碰撞检测</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-27T00:00:00+08:00">
+                2020-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="检测方式探究"><a href="#检测方式探究" class="headerlink" title="检测方式探究"></a>检测方式探究</h2><p>一：colider or trigger<br>这两个方式应该是初学者学习用的最多的检测方式，因为的确方便，而且确实可以根据刀剑范围所可以攻击到的地方进行检测，但该方法有一个致命缺陷，就是检测次数和动画帧数和真机画面渲染次数挂钩，即是如果动画过快导致碰撞框中间出现掉帧，则在该掉帧之间的敌人便无法攻击到。</p>
+      
+
+      
+        
+          
+            <h2 id="检测方式探究"><a href="#检测方式探究" class="headerlink" title="检测方式探究"></a>检测方式探究</h2><p>一：colider or trigger<br>这两个方式应该是初学者学习用的最多的检测方式，因为的确方便，而且确实可以根据刀剑范围所可以攻击到的地方进行检测，但该方法有一个致命缺陷，就是检测次数和动画帧数和真机画面渲染次数挂钩，即是如果动画过快导致碰撞框中间出现掉帧，则在该掉帧之间的敌人便无法攻击到。</p>
 <p>二：射线检测<br>射线检测即是指定位置，方向等信息发出一条射线，根据射线反馈的信息来操作物件交互，该方法常用在射击游戏里，在动作游戏中也经常用到。在本人的认知里该方法应该是最快最灵敏并且最省性能的方法了。</p>
 <p>三：向量计算<br>本人采用静态变量实现的该方法，类似崩坏3中关卡内其实地形不大，敌人数量也有限，那么所有敌人可以存放在一个静态链表里，时刻检测玩家与所有敌人的位置距离，向量角度等信息。该方法可能比较消耗性能，比如攻击时也检测所有敌人的位置信息以判断是否在攻击有效范围内。</p>
 <p>四：Bounds检测<br>该方法即调用unity的Bounds内置API来根据中心，半高创建一个长方体，常用其contains方法判断某个点(vector3变量)是否在长方体内。</p>
 
+          
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" data-id="ckcd6gi0j0004dwungpc6c7u8" class="article-share-link">Share</a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-抽象类和接口-C#" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/" class="article-date">
-  <time datetime="2020-06-26T14:47:13.000Z" itemprop="datePublished">2020-06-26</time>
-</a>
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LeeXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/">C#抽象类和接口</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/" itemprop="url">C#抽象类和接口</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-26T22:47:13+08:00">
+                2020-06-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>将对象共用方法写出方法名和返回类型和参数，没有方法体，如果要加入成员变量，只能是静态常量</p>
+      
+
+      
+        
+          
+            <h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>将对象共用方法写出方法名和返回类型和参数，没有方法体，如果要加入成员变量，只能是静态常量</p>
 <h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>可以有成员变量，成员方法，方法可以是抽象或非抽象，抽象方法不能有方法体，该类不能实例化，抽象方法必须在抽象类里。</p>
 <p>共同点：把对象的共性虚化<br>区别：接口只有Public，并且不方便随意增删改方法，因为会影响所有实现类，而接口如果加入非抽象方法不会影响子类。</p>
 <p>使用场景探究：<br>1.如果从对象的特性来说，对象需要共用该方法，并且共用成员变量，可以考虑继承抽象类；如果仅是实现某方法，可以使用接口。<br>2.抽象类用于捕捉子类共性，而一旦一个类实现某接口，就要实现里面所有方法。</p>
 <p>备注：题外话，项目中的接口和代码接口不一样，代码接口用于规范代码，项目接口属于实现一个信息处理类，让别的代码可以访问成员和方法进行调用，比如字典，字典便是实现个IConection等各个接口的方法的实现类，你可以去调用字典完成你的功能，不必关心内部实现，也可以自己写一个方法继承相关类去写一个字典类</p>
 
+          
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/" data-id="ckcd6gi0d0002dwungp1e9dmz" class="article-share-link">Share</a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-深究SmoothDamp和Lerp函数-Unity" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/" class="article-date">
-  <time datetime="2020-06-24T16:57:43.000Z" itemprop="datePublished">2020-06-25</time>
-</a>
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LeeXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/">first</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/" itemprop="url">first</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-25T00:57:43+08:00">
+                2020-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>原本我一直以为这两个函数实际上是差不多的，lerp是线性而smooth是弧型插值，直到我心血来潮写下这两行代码<br><img src="https://raw.githubusercontent.com/leeXin183/Resources/master/Pictures/SL.png" alt="Image text"><br>按下w和d都会影响两个方向的数值，按下a或者s正常，原因至今未明</p>
+      
+
+      
+        
+          
+            <p>原本我一直以为这两个函数实际上是差不多的，lerp是线性而smooth是弧型插值，直到我心血来潮写下这两行代码<br><img src="https://raw.githubusercontent.com/leeXin183/Resources/master/Pictures/SL.png" alt="Image text"><br>按下w和d都会影响两个方向的数值，按下a或者s正常，原因至今未明</p>
 <h2 id="SmoothDamp"><a href="#SmoothDamp" class="headerlink" title="SmoothDamp"></a>SmoothDamp</h2><p>弧型插值？,该函数有多个重载，其中常用的便是SmoothDamp(float current, float target, ref float currentVelocity, float smoothTime)，其中，第三个参数为引用调用，具体作用未知，望各位看客提提意见，最后一个参数决定了缓冲时间，从from到to的时间</p>
 <h2 id="Lerp"><a href="#Lerp" class="headerlink" title="Lerp"></a>Lerp</h2><p>线性插值？，官方代码注释中解释是在from和to之间用t线性插值，t在0-1之间，t为0时返回from,t为1时返回to，t为0.5返回平均值，由此可见按照当下常规用法（transform.position,targetposition,t)是容易造成最后到达一个无限逼近目标值的数字，比如99999.。。。，</p>
 
+          
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/" data-id="ckcd6gi0h0003dwuncmpe3eqc" class="article-share-link">Share</a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-观察者模式和中介者模式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/20/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time datetime="2020-06-20T02:05:05.000Z" itemprop="datePublished">2020-06-20</time>
-</a>
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/20/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LeeXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/20/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">观察者模式和中介者模式</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/20/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" itemprop="url">观察者模式和中介者模式</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-20T10:05:05+08:00">
+                2020-06-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h2><p>简单来说就是有很多不同类型的对象，每个类型都有相应一系列的观察者，当被观察者发生改变，要发送通知给所有依赖于此对象的观察者通知观察者和被观察者时抽象耦合，建立一套触发机制。<br>缺点：<br>1：如果一个被观察者有很多直接和间接观察者，全部通知有点麻烦<br>2：如果观察者和被观察者有循环依赖，循环调用会导致系统崩溃<br>3：观察者只是知道被观察者发生了变化，而不知道是怎么发生变化的</p>
+      
+
+      
+        
+          
+            <h2 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h2><p>简单来说就是有很多不同类型的对象，每个类型都有相应一系列的观察者，当被观察者发生改变，要发送通知给所有依赖于此对象的观察者通知观察者和被观察者时抽象耦合，建立一套触发机制。<br>缺点：<br>1：如果一个被观察者有很多直接和间接观察者，全部通知有点麻烦<br>2：如果观察者和被观察者有循环依赖，循环调用会导致系统崩溃<br>3：观察者只是知道被观察者发生了变化，而不知道是怎么发生变化的</p>
 <h2 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h2><p>当对象发生改变，发出通知给中介者，由中介者去发送通知给要通知的对象，中介者必须要维护场上所有对象。该设计模式也有较好的复用性和解耦，将类与类之间的关系通过中介者联合起来。<br>缺点<br>1：中介者代码量庞大，维护比较困难</p>
 <h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2><p><a href="https://www.runoob.com/design-pattern/observer-pattern.html" target="_blank" rel="noopener">https://www.runoob.com/design-pattern/observer-pattern.html</a></p>
 
+          
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/20/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" data-id="ckcd6gi0l0005dwun1xjfefd9" class="article-share-link">Share</a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-unity旋转探究1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/25/unity%E6%97%8B%E8%BD%AC%E6%8E%A2%E7%A9%B61/" class="article-date">
-  <time datetime="2020-05-24T16:57:43.000Z" itemprop="datePublished">2020-05-25</time>
-</a>
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/25/unity%E6%97%8B%E8%BD%AC%E6%8E%A2%E7%A9%B61/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LeeXin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/25/unity%E6%97%8B%E8%BD%AC%E6%8E%A2%E7%A9%B61/">unity旋转探究1</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/25/unity%E6%97%8B%E8%BD%AC%E6%8E%A2%E7%A9%B61/" itemprop="url">unity旋转探究1</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-25T00:57:43+08:00">
+                2020-05-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="坦克的炮台旋转方式"><a href="#坦克的炮台旋转方式" class="headerlink" title="坦克的炮台旋转方式"></a>坦克的炮台旋转方式</h2><p>具体需求：坦克是一个双层结构，底下一层基座，上面一层炮台，在玩家进行上下左右移动时应该旋转基座并前进指定方向，而炮台便跟随鼠标移动方向旋转</p>
+      
+
+      
+        
+          
+            <h2 id="坦克的炮台旋转方式"><a href="#坦克的炮台旋转方式" class="headerlink" title="坦克的炮台旋转方式"></a>坦克的炮台旋转方式</h2><p>具体需求：坦克是一个双层结构，底下一层基座，上面一层炮台，在玩家进行上下左右移动时应该旋转基座并前进指定方向，而炮台便跟随鼠标移动方向旋转</p>
 <p>1.起初，我的思路是这样的，利用常用的屏幕射线到游戏场景，然后直接调用Quaternion的API–LookAt，直接看向射线点，当然这有很多问题，比如炮台在指向高低不平的地方也会上下旋转，鼠标指向敌人也会抬高炮台，如果添加rigidbody去锁定旋转轴又会导致炮台直接固定不动，直接人头分离（学姐样）。因此该方法显然行不通。</p>
 <p>2.改进思路，查看Unity官方文档后发现射线可以指定忽略层级，表明忽略某一层的colider，又或者在射线检测中if嵌套检测该物体Layer是多少，以分多种判断。显然，该方法理论上应该可以实现，但是需要忽略多个层级的东西，我只需要检测地面，代码显然是非常多的，不符合我代码风格。</p>
 <p>3.咱们继续改进，射线的API感觉不行了，那我们从原理入手吧，看来程序还是逃不过计算，游戏开发还是离不开3d图形学。首先，假定地面是一整个平面，就是普通的xoy二维坐标，玩家为原点，鼠标指向的点设为(x1,y1),计算玩家到目标点的向量，事先用一个temp保存玩家的方向，然后计算目标向量与当前向量的角度，然后调用Rotate函数转过去，当然理论我jio得海星，实践起来发现这玩意有亿点点问题，首先是角度限制问题，我发现Vector3.Angle函数所计算出来得角度是半角，最大只能到180度，当你鼠标转到6点钟方向再逆时针转回去角度是从180到0，简单来说，这个方法在顺时针旋转得时候可以正常，但是逆时针旋转就会硬绕一圈。所以这个方法先不考虑性能问题，代码冗余问题，首先功能就实现不了啊喂(#`O′)。</p>
 <p>4.没辙了，我干脆不用什么旋转函数了，我直接设置炮台的旋转量rotation，我看你行不行。这玩意是个四元数，也就是Quaternion，这个东西臭名昭彰，难到爆炸，当年看shader女神分析这玩意的博客愣是没看懂。计算这个东西还是免了，我看看有什么直接使用的值吧，然后我看到了Quaternion.LookRotation，该函数可以直接指向一个forward向量，姑且我就理解为旋转量正前方看向该向量的方向吧，当然，通过上个方法的分析，我们可以计算出目标点和玩家的向量，那么直接调用该方法不就好了？！当然记得把y轴分量设为0，如此一来果然解决了所有问题（起码目前还没发现任何问题）。</p>
 <p>总结：讲道理，踩弯路的过程是痛苦的，解决问题的时候的喜悦是无法描述的，还是得好好学习一下数学啊</p>
 
+          
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/25/unity%E6%97%8B%E8%BD%AC%E6%8E%A2%E7%A9%B61/" data-id="ckcd6gi050000dwunheimdwqz" class="article-share-link">Share</a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+  </section>
 
   
 
 
-</section>
+          </div>
+          
+
+
+          
+
+        </div>
         
-          <aside id="sidebar">
+          
   
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
 
-
-  
+  <aside id="sidebar" class="sidebar">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/07/08/struct%E5%92%8Cclass/">struct和class</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/">碰撞检测</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/">C#抽象类和接口</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/">first</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/20/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">观察者模式和中介者模式</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    <div class="sidebar-inner">
 
-  
-</aside>
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">LeeXin</p>
+              <p class="site-description motion-element" itemprop="description">hello world</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-      <footer id="footer">
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LeeXin</span>
+
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
+    
 
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
