@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="接口将对象共用方法写出方法名和返回类型和参数，没有方法体，如果要加入成员变量，只能是静态常量 抽象类可以有成员变量，成员方法，方法可以是抽象或非抽象，抽象方法不能有方法体，该类不能实例化，抽象方法必须在抽象类里。 共同点：把对象的共性虚化区别：接口只有Public，并且不方便随意增删改方法，因为会影响所有实现类，而接口如果加入非抽象方法不会影响子类。 使用场景探究：1.如果从对象的特性来说，对象需">
+<meta name="description" content="值类型值类型就是int,long等直接表示数据的类型，存储在栈上，由系统自动释放。对于struct，我在讲述结构体与class的使用场景探究是有详细说明，有兴趣的同学可以看看《struct和class》，还有enum，用状态值表示int。 引用类型引用类型存放数据的引用，比如class,interface,delegate。还有内置的一些引用类型，比如string,object,dynamic。对">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#抽象类和接口">
-<meta property="og:url" content="http://yoursite.com/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/index.html">
+<meta property="og:title" content="值类型和引用类型">
+<meta property="og:url" content="http://yoursite.com/2020/07/08/%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="接口将对象共用方法写出方法名和返回类型和参数，没有方法体，如果要加入成员变量，只能是静态常量 抽象类可以有成员变量，成员方法，方法可以是抽象或非抽象，抽象方法不能有方法体，该类不能实例化，抽象方法必须在抽象类里。 共同点：把对象的共性虚化区别：接口只有Public，并且不方便随意增删改方法，因为会影响所有实现类，而接口如果加入非抽象方法不会影响子类。 使用场景探究：1.如果从对象的特性来说，对象需">
+<meta property="og:description" content="值类型值类型就是int,long等直接表示数据的类型，存储在栈上，由系统自动释放。对于struct，我在讲述结构体与class的使用场景探究是有详细说明，有兴趣的同学可以看看《struct和class》，还有enum，用状态值表示int。 引用类型引用类型存放数据的引用，比如class,interface,delegate。还有内置的一些引用类型，比如string,object,dynamic。对">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-26T14:47:13.000Z">
-<meta property="article:modified_time" content="2020-06-29T15:13:43.382Z">
+<meta property="article:published_time" content="2020-07-08T13:01:37.000Z">
+<meta property="article:modified_time" content="2020-07-08T15:56:48.795Z">
 <meta property="article:author" content="LeeXin">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/26/抽象类和接口-C#/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/08/值类型和引用类型/"/>
 
 
 
 
 
-  <title>C#抽象类和接口 | Hexo</title>
+  <title>值类型和引用类型 | Hexo</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3-C#/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/08/%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LeeXin">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C#抽象类和接口</h1>
+          <h1 class="post-title" itemprop="name headline">值类型和引用类型</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-26T22:47:13+08:00">
-                2020-06-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-08T21:01:37+08:00">
+                2020-07-08
               </time>
             
 
@@ -319,11 +319,13 @@
       
 
       
-        <h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>将对象共用方法写出方法名和返回类型和参数，没有方法体，如果要加入成员变量，只能是静态常量</p>
-<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>可以有成员变量，成员方法，方法可以是抽象或非抽象，抽象方法不能有方法体，该类不能实例化，抽象方法必须在抽象类里。</p>
-<p>共同点：把对象的共性虚化<br>区别：接口只有Public，并且不方便随意增删改方法，因为会影响所有实现类，而接口如果加入非抽象方法不会影响子类。</p>
-<p>使用场景探究：<br>1.如果从对象的特性来说，对象需要共用该方法，并且共用成员变量，可以考虑继承抽象类；如果仅是实现某方法，可以使用接口。<br>2.抽象类用于捕捉子类共性，而一旦一个类实现某接口，就要实现里面所有方法。</p>
-<p>备注：题外话，项目中的接口和代码接口不一样，代码接口用于规范代码，项目接口属于实现一个信息处理类，让别的代码可以访问成员和方法进行调用，比如字典，字典便是实现个IConection等各个接口的方法的实现类，你可以去调用字典完成你的功能，不必关心内部实现，也可以自己写一个方法继承相关类去写一个字典类</p>
+        <h2 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h2><p>值类型就是int,long等直接表示数据的类型，存储在栈上，由系统自动释放。对于struct，我在讲述结构体与class的使用场景探究是有详细说明，有兴趣的同学可以看看《struct和class》，<br>还有enum，用状态值表示int。</p>
+<h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><p>引用类型存放数据的引用，比如class,interface,delegate。还有内置的一些引用类型，比如string,object,dynamic。对于委托可以看另一篇文章《C#委托探究》，dynamic是一个动态类型，和object差不多，可以和所有类型转换，但dynamic是在运行时识别对象，而object是在编译时检查类型是否错误，所以dynamic性能较快，跳过类型检查，但最好要保证转换类型正常，否则错误（实际上dynamic是编译期存在，在运行时会变为object）<br>跑题了，引用类型存放在堆上，俗称托管堆，该区域主要存放引用对象，引用存放在栈上，所以在赋值的时候值类型是多复制一个数值在栈上，引用类型只是复制一个该数据堆的引用。托管堆由GC进行管理，由此可见通常来讲引用类型是十分消耗性能的，首先创建引用在栈上，然后在堆上开辟一个新空间。但又由于其操作的是一个引用（占四个字节，包含指向数据堆的地址），相当于一个指针，所以特定情况下性能比值类型要高。<br>假如现在首先开辟了一个int类类型放在栈上，然后又创建一个object装箱该Int，则会在堆中开辟一个新空间存放该Int的数据副本。也就是说如果一个引用类型包含值类型，则该值类型是在堆上的</p>
+<p>区别：1.引用类型额外有类型对象指针和同步块索引，值类型是没有的。所以我们平时使用lock 锁的对象不可能是值类型，因为值类型没有同步块索引<br>2.所有值类型都是密封的，不能继承。<br>3.值类型的复制都是全字段的复制，而引用类型只是指针的复制</p>
+<p>性能方面：<br>上面也说了，值类型是复制，调用时都是全字段操作，所以调用函数、作为参数传入时值类型（struct）会进行全字段传入，是典型的值类型勿用场景<br>引用类型的初始化实际上可能会强制触发一次GC操作，所以也是相当耗性能，并且所占空间不止所有成员的和，每个成员还有内存块索引和类型对象指针<br>引用类型还有一个转换时装拆箱的性能消耗，在装箱时，首先开辟堆空间存放数据和内存索引和类型对象指针（事先在栈上存好值类型，然后复制进来堆里），然后返回地址；而拆箱则是首先获取箱子的地址，然后把值复制到栈上</p>
+<p>关于应用场景：大部分情况下都是引用类型，使用值类型一般是满足以下条件<br>1：类型不会派生出其他类型<br>2：类型不需要继承其他类型<br>3：类型实例较小，不会作为方法参数，不会频繁赋值<br>4：不需要知道类型释放的通知，引用类型可以通过析构函数来得到释放通知<br>5：值不会发生改变甚至是readonly类型的时候<br>备注：<br>对于接口，接口只能包含方法名，静态只读变量，事件和索引器（？）<br>object不用多说，所有类型都直接或间接继承该类，值类型转换为这个相当于装箱，反之为拆箱。<br>string是字符串类型，该类型要说简单也简单，要说复杂也复杂，我打算专门开一篇文章讲述<br>数组也是对象，是对象的集合</p>
+<p>这里提一个特殊关键字var，该类型是隐式强类型变量（相当于已经声明了该类型），但还是由编译器确定类型。</p>
+<p>引用：<a href="https://www.cnblogs.com/qtiger/p/11177056.html" target="_blank" rel="noopener">https://www.cnblogs.com/qtiger/p/11177056.html</a></p>
 
       
     </div>
@@ -348,8 +350,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/25/%E6%B7%B1%E7%A9%B6SmoothDamp%E5%92%8CLerp%E5%87%BD%E6%95%B0-Unity/" rel="next" title="first">
-                <i class="fa fa-chevron-left"></i> first
+              <a href="/2020/07/08/struct%E5%92%8Cclass/" rel="next" title="struct和class">
+                <i class="fa fa-chevron-left"></i> struct和class
               </a>
             
           </div>
@@ -358,8 +360,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/27/%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B/" rel="prev" title="碰撞检测">
-                碰撞检测 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/07/08/Mipmap/" rel="prev" title="Mipmap">
+                Mipmap <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -474,7 +476,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口"><span class="nav-number">1.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象类"><span class="nav-number">2.</span> <span class="nav-text">抽象类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#值类型"><span class="nav-number">1.</span> <span class="nav-text">值类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用类型"><span class="nav-number">2.</span> <span class="nav-text">引用类型</span></a></li></ol></div>
             
 
           </div>
