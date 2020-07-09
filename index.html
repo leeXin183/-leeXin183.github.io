@@ -686,8 +686,10 @@
       
         
           
-            <h2 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h2><p>结构体，存储在栈上的数据类型，值类型</p>
-<h2 id="class"><a href="#class" class="headerlink" title="class"></a>class</h2>
+            <h2 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h2><p>结构体，存储在栈上的数据类型，值类型，赋值时是全字段复制，影响一个另一个不会影响，结构里的字段除了static和const都不能直接初始化，没有无参构造函数和析构函数，结构的实例化不用New，结构不能继承或被继承，可以实现接口。在结构体初始化所有字段之前，结构体对象不可用（？）</p>
+<h2 id="class"><a href="#class" class="headerlink" title="class"></a>class</h2><p>类是一种引用类型，赋值时是复制一份对象的引用，可以继承基类，子类对象可以兼容父类（反之不行），类可以声明为抽象类，可以编写抽象方法，抽象类无法实例化，实现了该类的子类才可以实例化，同时可以声明为静态，当一个类是静态类时无法new。</p>
+<p>ps:结构在赋值时进行复制。将结构赋值给新变量时，将复制所有数据，并且对新副本所做的任何修改不会更改原始副本的数据。在使用值类型的集合（如 Dictionary&lt;string, myStruct&gt;）时，请务必记住这一点。</p>
+
           
         
       
