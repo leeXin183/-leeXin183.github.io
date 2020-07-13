@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="热爱游戏开发">
+<meta name="description" content="协程(coroutine)在unity里面一直扮演着十分重要的角色，本人也常常用来设置敌人的状态、计时器或者说某些事件特定触发和分散复杂操作等，但很少探究协程是如何去实现的，原理是什么，在这里便整理一下在研究协程的原理之前我们先注意协程的一些要点： 1.Unity主线程可以理解为其生命周期一个流程，常用如下Awake()：唤醒事件，游戏一开始运行就执行，只执行一次。 OnEnable()：启用事件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="静态与非静态">
-<meta property="og:url" content="http://yoursite.com/2020/07/08/%E9%9D%99%E6%80%81%E4%B8%8E%E9%9D%9E%E9%9D%99%E6%80%81/index.html">
+<meta property="og:title" content="协程的实现原理">
+<meta property="og:url" content="http://yoursite.com/2020/07/13/%E5%8D%8F%E7%A8%8B%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="热爱游戏开发">
+<meta property="og:description" content="协程(coroutine)在unity里面一直扮演着十分重要的角色，本人也常常用来设置敌人的状态、计时器或者说某些事件特定触发和分散复杂操作等，但很少探究协程是如何去实现的，原理是什么，在这里便整理一下在研究协程的原理之前我们先注意协程的一些要点： 1.Unity主线程可以理解为其生命周期一个流程，常用如下Awake()：唤醒事件，游戏一开始运行就执行，只执行一次。 OnEnable()：启用事件">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-08T14:27:36.000Z">
-<meta property="article:modified_time" content="2020-07-08T14:27:36.063Z">
+<meta property="article:published_time" content="2020-07-13T15:10:13.000Z">
+<meta property="article:modified_time" content="2020-07-13T17:03:09.293Z">
 <meta property="article:author" content="LeeXin">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/08/静态与非静态/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/13/协程的实现原理/"/>
 
 
 
 
 
-  <title>静态与非静态 | Hexo</title>
+  <title>协程的实现原理 | Hexo</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/08/%E9%9D%99%E6%80%81%E4%B8%8E%E9%9D%9E%E9%9D%99%E6%80%81/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/%E5%8D%8F%E7%A8%8B%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LeeXin">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">静态与非静态</h1>
+          <h1 class="post-title" itemprop="name headline">协程的实现原理</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-08T22:27:36+08:00">
-                2020-07-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-13T23:10:13+08:00">
+                2020-07-13
               </time>
             
 
@@ -319,7 +319,28 @@
       
 
       
-        
+        <p>协程(coroutine)在unity里面一直扮演着十分重要的角色，本人也常常用来设置敌人的状态、计时器或者说某些事件特定触发和分散复杂操作等，但很少探究协程是如何去实现的，原理是什么，在这里便整理一下<br>在研究协程的原理之前我们先注意协程的一些要点：</p>
+<p>1.Unity主线程可以理解为其生命周期一个流程，常用如下<br>Awake()：唤醒事件，游戏一开始运行就执行，只执行一次。</p>
+<p>OnEnable()：启用事件，只执行一次。当脚本组件被启用的时候执行一次。</p>
+<p>Start()：开始事件，执行一次。</p>
+<p>FixedUpdate()：固定更新事件，执行N次，0.02秒执行一次。所有物理组件相关的更新都在这个事件中处理。</p>
+<p>Update()：更新事件，执行N次，每帧执行一次。</p>
+<p>LateUpdate()：稍后更新事件，执行N次，在 Update() 事件执行完毕后再执行。</p>
+<p>OnGUI()：GUI渲染事件，执行N次，执行的次数是 Update() 事件的两倍。</p>
+<p>OnDisable()：禁用事件，执行一次。在 OnDestroy() 事件前执行。或者当该脚本组件被“禁用”后，也会触发该事件。</p>
+<p>OnDestroy()：销毁事件，执行一次。当脚本所挂载的游戏物体被销毁时执行。</p>
+<p>2.协程是在主线程中运行的一种伪多线程，他将代码块独立开来，每次执行到yield被挂起，然后下次开始是又yield决定，内部需要一个类似栈的结构来保存协程当前数据，以便下次使用<br>在Unity3D中，协程是可自行停止运行 (yield)，直到给定的 YieldInstruction 结束再继续运行的函数。 协程 (Coroutines) 的不同用途：</p>
+<p>• yield; 在下一帧上调用所有 Update 函数后，协同程序将继续运行。</p>
+<p>• yield WaitForSeconds(2); 在指定的时间延迟之后，为此帧调用所有 Update 函数之后继续运行</p>
+<p>• yield WaitForFixedUpdate(); 在所有脚本上调用所有 FixedUpdate 后继续运行</p>
+<p>• yield WWW 完成 WWW 下载后继续运行。</p>
+<p>• yield StartCoroutine(MyFunc); 连接协同程序，并等待 MyFunc coroutine 首先结束。</p>
+<p>也就是说，将代码段分散在不同的帧中，每次执行一段，下一帧再执行yield挂起的地方。</p>
+<p>3.unity是单线程设计，如果new Thread创建新线程来调用UnityAPI比如创建一个GameObject，则会报错,Unity主循环是单线程，游戏脚本MonoBehavior有着严格的生命周期,倾向使用time slicing（时间分片）的协程（coroutine）去完成异步任务,</p>
+<p>扯了这么多，我们已经大致了解协程的作用，接下来我们可以去探究一下协程的原理<br>1.迭代器<br>首先，每次编写协程时我们都要先返回一个迭代器IEnumerator</p>
+<p>ps:<br>线程是操作系统级别的概念，现代操作系统都实现并且支持线程，线程的调度对应用开发者是透明的，开发者无法预期某线程在何时被调度执行。基于此，一般那种随机出现的BUG，多与线程调度相关。</p>
+<p>参考<br><a href="https://blog.csdn.net/qq_15020543/article/details/83956945" target="_blank" rel="noopener">https://blog.csdn.net/qq_15020543/article/details/83956945</a><br><a href="https://www.jianshu.com/p/c958a3331169" target="_blank" rel="noopener">https://www.jianshu.com/p/c958a3331169</a><br><a href="https://www.cnblogs.com/yespi/p/9847533.html" target="_blank" rel="noopener">https://www.cnblogs.com/yespi/p/9847533.html</a><br><a href="https://www.cnblogs.com/zhaodahai/p/6831461.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaodahai/p/6831461.html</a><br><a href="https://www.sohu.com/a/124163126_466876" target="_blank" rel="noopener">https://www.sohu.com/a/124163126_466876</a></p>
+
       
     </div>
     
@@ -419,7 +440,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
